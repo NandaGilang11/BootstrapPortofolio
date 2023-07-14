@@ -1,0 +1,25 @@
+.navbar {
+    background-color: #39ace7;
+}
+
+
+.hero {
+    background-color: #e2edff;
+}
+
+#project {
+    background-color: #e2edff;
+}
+
+section {
+    padding-top: 100px
+}
+
+footer {
+    background-color: #39ace7;
+}
+
+footer a {
+    text-decoration: none;
+}
+
