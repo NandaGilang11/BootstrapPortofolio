@@ -53,9 +53,6 @@
               <a class="nav-link" href="#project">Project</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#gallery">Gallery</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
@@ -158,6 +155,40 @@
                 </div>
             </div>
         </div>
+
+        <section id="my-heroes">
+            <div class="container">
+                <div class="row text-center mb-3">
+                    <div class="col">
+                        <h2>My Heroes</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4 mb-3">
+                        <div class="heroes-box">
+                            <h4 class="heroes-name">Thor</h4>
+                            <img src="img/heroes/3.png" alt="Thor" class="heroes-img">
+                            <a href="https://id.wikipedia.org/wiki/Thor" class="btn btn-light heroes-detail-button">Show Details</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-3">
+                        <div class="heroes-box">
+                            <h4 class="heroes-name">Captain America</h4>
+                            <img src="img/heroes/2.png" alt="Captain America" class="heroes-img">
+                            <a href="https://id.wikipedia.org/wiki/Captain_America" class="btn btn-light heroes-detail-button">Show Details</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-3">
+                        <div class="heroes-box">
+                            <h4 class="heroes-name">Iron Man</h4>
+                            <img src="img/heroes/1.png" alt="Iron Man" class="heroes-img">
+                            <a href="https://id.wikipedia.org/wiki/Iron_Man" class="btn btn-light heroes-detail-button">Show Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#ffffff" fill-opacity="1"
                 d="M0,192L48,213.3C96,235,192,277,288,272C384,267,480,213,576,213.3C672,213,768,267,864,277.3C960,288,1056,256,1152,250.7C1248,245,1344,267,1392,277.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
@@ -311,7 +342,7 @@
 
     <script>
         gsap.registerPlugin(TextPlugin);
-        gsap.to('.lead', {duration: 4, delay:1.5, text:'Web Developer | Fullstack Developer'});
+        gsap.to('.lead', {duration: 4, delay:1.5, text:'Web Designer | Web Developer'});
         gsap.from('.hero img', {duration: 1, y: -100, opacity: 0, ease: 'bounce'});
         gsap.from('.display-4', {duration: 1, x: -100, opacity: 0, delay: 0.5, ease: 'back'});
     </script>
@@ -341,6 +372,15 @@
                 })
                 .catch(error => console.error('Error!', error.message))
         })
+    </script>
+
+    <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelectorAll(".heroes-box"), {
+            max: 30,
+            speed: 1000,
+            glare: true,
+        });
     </script>
   </body>
 </html>
